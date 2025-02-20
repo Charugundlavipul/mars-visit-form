@@ -43,11 +43,17 @@ export default function App() {
 
   return (
     <div className="form-container">
+      <div className="form-header">
+        <h1>Mars Application Form</h1>
+        <p>Begin your interplanetary journey</p>
+      </div>
+      
       <ProgressIndicator currentStep={currentStep} totalSteps={3} />
 
       {submitted ? (
         <div className="success-message">
           Application submitted successfully! 🚀
+          <div className="rocket-animation">→🚀→</div>
         </div>
       ) : (
         <FormProvider {...methods}>
